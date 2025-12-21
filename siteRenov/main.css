@@ -3,7 +3,7 @@
     --un:#222222;
     --deux:#FF6D1F;
     --trois:#FAF3E1;
-
+    --quatre:#F5E7C6;
 }
 
 @keyframes slideUp{
@@ -15,6 +15,12 @@
         transform:translateY(0);
         opacity:1;
     }
+}
+
+*{
+    margin-right:0;
+    margin-left: 0;
+    
 }
 
 
@@ -47,6 +53,7 @@ header{
     height:5em;
     text-align: center;
     box-shadow: 1px 2px 3px var(--deux);
+    z-index:1000;
 }   
 
 .header-navbar-mobile ul{
@@ -61,17 +68,57 @@ header{
     
 }
 .header-navbar-mobile .header-mobile-img-logo,.header-mobile-img-menu{
-    width:100px;
     height:auto;
 }
 
 .header-mobile-img-logo{
     margin-left: -1em;
+    margin-top:-0.65em;
+    width:125px;
 }
 
 .header-mobile-img-menu{
     margin-right: 2em;
+    margin-top:0.75em;
+    width:50px;
 }
+
+
+
+
+
+.navbar-mobile-menu{
+    position:absolute;
+    background-color: var(--un);
+    right:0;
+    top:5.1em;
+    padding:1em;
+    font-size: 1em;
+    display:flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: right 0.4s ease;
+}
+
+.navbar-mobile-menu a{
+    color:var(--trois);
+    text-decoration: none;
+    padding:1em;
+    border-top: 1px solid var(--deux);
+}
+
+.navbar-mobile-menu a:hover{
+    background-color: var(--trois);
+    color:var(--un)
+}
+.navbar-mobile-menu{
+    opacity:0;
+}
+
+.navbar-mobile-menu.open{
+    opacity: 1;
+}
+
 
 
 
@@ -95,7 +142,7 @@ header{
     
 }
 
-#hero h1,h3,a{
+#hero h1,#hero h3,#hero a{
     opacity:0;
 }
 
@@ -155,43 +202,188 @@ header{
 
 }
 
+
+
+
+
+
+
+
 #liste-services{
     background-color:white;
-    color:var(--un)
+    color:var(--un);
+    margin-top:-2.8em;
+}
+
+#liste-services h2{
+    font-size:2em;
+    margin-top:2.5em;
+}
+
+
+#liste-services hr{
+    width:50%;
+    margin:20px auto;
+    margin-top:-5px;
+    height:2px;
+    background-color: var(--quatre);
+}
+
+#liste-services .Toiture hr{
+    background-color: var(--un);
+}
+
+#liste-services .Peinture hr{
+    background-color: var(--trois);
+}
+
+#liste-services .Nettoyage hr{
+    background-color: var(--quatre);
+}
+
+#liste-services .Agricole hr{
+    background-color: var(--un);
+}
+
+
+
+#liste-services p{
+    font-weight: 200;
+}
+#liste-services .Toiture{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin-top:3em;
+    color:var(--un);
+    height:35em;
+    width:100%;
+    height:25em;
+    background: linear-gradient(rgba(250,243,225,0.60), rgba(250,243,225,0.73)), url("image-liste-services.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#liste-services .Toiture .Toiture-para{
+    margin-right:1em;
+    margin-left:1em;
+    font-size:1.2em;
+}
+
+#liste-services .Toiture .Toiture-para p{
+    opacity:0;
+    transform:translateY(20px);
+    transition: all 0.5s ease;
+}
+
+#liste-services .Toiture:hover .Toiture-para p{
+    
+    opacity:1;
+    transform:translateY(0);
 }
 
 #liste-services .Peinture{
     display:flex;
     flex-direction: column;
     text-align: center;
-    margin-top:3em;
+
     color:var(--trois);
     height:35em;
     width:100%;
-    height:10em;
+    height:25em;
     background: linear-gradient(rgba(34,34,34,0.60), rgba(34,34,34,0.73)), url("image-liste-services.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
+}
+
+#liste-services .Peinture .Peinture-para{
+    margin-right:1em;
+    margin-left:1em;
+    font-size:1.2em;
+}
+
+#liste-services .Peinture .Peinture-para p{
+    opacity:0;
+    transform:translateY(20px);
+    transition: all 0.5s ease;
+}
+
+#liste-services .Peinture:hover .Peinture-para p{
+    
+    opacity:1;
+    transform:translateY(0);
 }
 
 
-
 #liste-services .Nettoyage{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    color:var(--quatre);
     margin-top :-1.1em;
-    height:10em;
+    height:25em;
     background: linear-gradient(rgba(255,109,31,0.60), rgba(255,109,31,0.73)), url("image-liste-services.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-#liste-services .Traitement{
-    margin-top :-1.1em;
 
-    height:10em;
-    background: linear-gradient(rgba(250,243,225,0.60), rgba(250,243,225,0.73)), url("image-liste-services.webp");
+#liste-services .Nettoyage .Nettoyage-para{
+    margin-right:1em;
+    margin-left:1em;
+    font-size:1.2em;
+
+}
+
+#liste-services .Nettoyage .Nettoyage-para p{
+    opacity:0;
+    transform:translateY(20px);
+    transition: all 0.5s ease;
+}
+
+#liste-services .Nettoyage:hover .Nettoyage-para p{
+    
+    opacity:1;
+    transform:translateY(0);
+}
+
+#liste-services .Agricole{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin-top :-1.1em;
+    color:var(--un);
+    height:25em;
+    background: linear-gradient(rgba(241, 250, 225, 0.6), rgba(238, 250, 225, 0.73)), url("image-liste-services.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
 
+}
+
+#liste-services .Agricole .Agricole-para{
+    margin-right:1em;
+    margin-left:1em;
+    font-size:1.2em;
+
+}
+
+#liste-services .Agricole .Agricole-para p{
+    opacity:0;
+    transform:translateY(20px);
+    transition: all 0.5s ease;
+}
+
+#liste-services .Agricole:hover .Agricole-para p{
+    
+    opacity:1;
+    transform:translateY(0);
+}
+
+#contacts{
+    background-color: var(--trois);
 }
