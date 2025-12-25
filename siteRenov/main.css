@@ -257,9 +257,8 @@ header{
 
     margin-top:3em;
     color:var(--un);
-    height:35em;
     width:100%;
-    height:25em;
+    height:30em;
     background: linear-gradient(rgba(250,243,225,0.60), rgba(250,243,225,0.73)), url("image-liste-services.webp");
     background-size: cover;
     background-repeat: no-repeat;
@@ -272,13 +271,16 @@ header{
     font-size:1.2em;
 }
 
-#liste-services .Toiture .Toiture-para p{
+#liste-services .Toiture .Toiture-para{
     opacity:0;
     transform:translateY(20px);
     transition: all 0.5s ease;
 }
+#liste-services .Toiture .Toiture-para a{
+    border:1px solid var(--un);
+}
 
-#liste-services .Toiture:hover .Toiture-para p{
+#liste-services .Toiture:hover .Toiture-para{
     
     opacity:1;
     transform:translateY(0);
@@ -290,9 +292,8 @@ header{
     text-align: center;
 
     color:var(--trois);
-    height:35em;
     width:100%;
-    height:25em;
+    height:30em;
     background: linear-gradient(rgba(34,34,34,0.60), rgba(34,34,34,0.73)), url("image-liste-services.webp");
     background-size: cover;
     background-repeat: no-repeat;
@@ -305,13 +306,16 @@ header{
     font-size:1.2em;
 }
 
-#liste-services .Peinture .Peinture-para p{
+#liste-services .Peinture .Peinture-para{
     opacity:0;
     transform:translateY(20px);
     transition: all 0.5s ease;
 }
 
-#liste-services .Peinture:hover .Peinture-para p{
+#liste-services .Peinture .Peinture-para a{
+    border:1px solid var(--trois);
+}
+#liste-services .Peinture:hover .Peinture-para{
     
     opacity:1;
     transform:translateY(0);
@@ -324,7 +328,7 @@ header{
     text-align: center;
     color:var(--quatre);
     margin-top :-1.1em;
-    height:25em;
+    height:30em;
     background: linear-gradient(rgba(255,109,31,0.60), rgba(255,109,31,0.73)), url("image-liste-services.webp");
     background-size: cover;
     background-repeat: no-repeat;
@@ -338,13 +342,15 @@ header{
 
 }
 
-#liste-services .Nettoyage .Nettoyage-para p{
+#liste-services .Nettoyage .Nettoyage-para{
     opacity:0;
     transform:translateY(20px);
     transition: all 0.5s ease;
 }
-
-#liste-services .Nettoyage:hover .Nettoyage-para p{
+#liste-services .Nettoyage .Nettoyage-para a{
+    border:1px solid var(--quatre);
+}
+#liste-services .Nettoyage:hover .Nettoyage-para{
     
     opacity:1;
     transform:translateY(0);
@@ -357,7 +363,7 @@ header{
 
     margin-top :-1.1em;
     color:var(--un);
-    height:25em;
+    height:30em;
     background: linear-gradient(rgba(241, 250, 225, 0.6), rgba(238, 250, 225, 0.73)), url("image-liste-services.webp");
     background-size: cover;
     background-repeat: no-repeat;
@@ -372,18 +378,167 @@ header{
 
 }
 
-#liste-services .Agricole .Agricole-para p{
+#liste-services .Agricole .Agricole-para{
     opacity:0;
     transform:translateY(20px);
     transition: all 0.5s ease;
 }
+#liste-services .Agricole .Agricole-para a{
+    border:1px solid var(--un);
 
-#liste-services .Agricole:hover .Agricole-para p{
+}
+#liste-services .Agricole:hover .Agricole-para{
     
     opacity:1;
     transform:translateY(0);
 }
 
-#contacts{
+#liste-services a{
+
+    color:inherit;
+    text-decoration: none;
+    font-weight: 1000;
+    padding:0.5em;
+    width:10em;
+    text-align: center;
+   
+    margin-top: 3em;
+    margin-bottom:1.25em;
+}
+
+
+
+
+#contact{
+    display:flex;
+    flex-direction: column;
+    background-color: var(--un);
+
+}
+
+#contact .contact-card,#contact .form-card{
+    width:75%;
+    padding:1em;
+    margin:2em ;
+    border-radius: 10px;
+}
+.form-card{
+    opacity: 0;
+}
+
+.form-card{
+    animation:slideUp 1s ease-out forwards;
+    display:flex;
+    flex-direction: column;
+}
+
+.form-card h2{
+    text-align: left;
+    color:var(--trois);
+    font-size:1.7em;
+}
+
+.form-card .form-card-nomprenom{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:4em;
+}
+
+.form-card label{
+    display:block;
+    margin-top: 0.7em;
+    color:var(--trois);
+    font-size:1.5em;
+}
+
+.form-card input,.form-card textarea{
+    width:100%;
+    padding:0.7em 1em;
+    font-size:1em;
+    border-radius:8px;
+    border:1px solid var(--deux);
+    resize: vertical;
+}
+
+.form-card textarea{
+    min-height: 4.5em;
+}
+
+.form-card button{
+    text-align: center;
+    margin-top: 2em;
+    background-color: var(--un);
+    color:var(--trois);
+    padding:0.7em;
+    font-size:1em;
+    border: 1px solid var(--trois);
+}
+
+.form-card button:hover{
+    background-color: var(--deux);
+    color:var(--quatre);
+}
+
+
+
+
+
+
+.contact-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1.5em;
+}
+
+.contact-card-one,.social-card{
     background-color: var(--trois);
+    padding:1em;
+    border-radius: 10px;
+}
+
+.contact-card-one:hover,.social-card:hover{
+    box-shadow: 1px 1px 4px var(--trois);
+}
+
+.contact-card-one h3,.social-card h3{
+    text-align: center;
+    
+}
+.contact-card-one hr,.social-card hr{
+
+    width:75%;
+    margin:20px auto;
+    margin-top:-5px;
+    height:2px;
+    background-color: var(--un);
+}
+
+
+
+#hero-toiture{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top:3em;
+    color:var(--trois);
+    height:100%;
+    width:100%;
+     
+    
+    background: linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.73)), url("fond.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+#hero-toiture-card{
+    color:var(--un);
+    background-color: var(--trois);
+    margin:4em auto;
+    font-size:1.25em;
+    font-weight:300;
+    margin-right:2em;
+    margin-left:2em;
+    padding:1em;
+
 }
