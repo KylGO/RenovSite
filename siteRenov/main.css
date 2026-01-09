@@ -113,10 +113,12 @@ header{
 }
 .navbar-mobile-menu{
     opacity:0;
+    pointer-events: none;
 }
 
 .navbar-mobile-menu.open{
     opacity: 1;
+    pointer-events: auto;
 }
 
 
@@ -179,8 +181,7 @@ header{
 
 
 
-
-#services{
+#services,#services-contact{
 
     font-size:2em;
     display:flex;
@@ -197,7 +198,7 @@ header{
 
 }
 
-#services h2{
+#services h2,#services-contact h2{
     animation:slideUp 1s ease-out forwards;
 
 }
@@ -416,6 +417,13 @@ header{
 
 }
 
+#contact #title-fin{
+    color:whitesmoke;
+    font-size:2em;
+    margin-left:1em;
+    margin-bottom: -0.5em;
+}
+
 #contact .contact-card,#contact .form-card{
     width:75%;
     padding:1em;
@@ -472,6 +480,7 @@ header{
     padding:0.7em;
     font-size:1em;
     border: 1px solid var(--trois);
+    cursor: pointer;
 }
 
 .form-card button:hover{
@@ -486,12 +495,12 @@ header{
 
 .contact-card{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
     gap:1.5em;
 }
 
 .contact-card-one,.social-card{
-    background-color: var(--trois);
+    background-color: whitesmoke;
     padding:1em;
     border-radius: 10px;
 }
@@ -513,7 +522,12 @@ header{
     background-color: var(--un);
 }
 
-
+.contact-card-group{
+    margin-top:2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1em;
+}
 
 #hero-toiture{
     display:flex;
@@ -540,5 +554,129 @@ header{
     margin-right:2em;
     margin-left:2em;
     padding:1em;
+
+}
+
+#services-contact{
+    height:10em;
+    
+}
+
+#services-contact h2{
+    margin-top:2.5em;
+}
+
+
+.grille-exemple{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin:20px 0;
+}
+
+.grille-exemple img{
+    width: 100%;
+    height:200px;
+    object-fit:cover;
+    border-radius: 10px;
+    cursor:pointer;
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grille-exemple img:hover{
+
+    transform: scale(1.10);
+    box-shadow:0 10px 25px var(--un);
+}
+#hero-toiture-card-two{
+    background-color: var(--un);
+    color:var(--trois)
+}
+
+@media (min-width:768px){
+    .header-navbar-pc{
+        display: flex;
+        align-items: center;
+    }
+    .header-navbar-pc ul{
+        list-style: none;
+        margin-left:2em;
+    }
+
+    .header-navbar-pc li{
+        font-size:1.25em;
+        margin-right: 4em;
+        margin-left: 4em;    
+        display: inline-block;
+        cursor:pointer
+    }
+    .header-navbar-pc li:hover{
+        color:var(--deux);
+    }
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height:5em;
+        justify-content: center;
+        
+    }
+    header a{
+        color:inherit;
+
+    }
+    header img{
+        position: absolute;
+        left:3em;
+        height: 75px;
+        width:auto;
+        
+    }
+
+    
+
+    #hero{
+        height:60em;
+    }
+
+    #hero h1{
+        font-size:4.5em;
+    }
+    #hero h3{
+        font-size:2.5em;
+    }
+    #hero h4{
+        margin-top: 0.10em;
+        font-size:2em;
+    }
+    #services,#services-contact{
+        height:10em;
+    }
+    #services h2,#services-contact h2{
+        margin-top:2.5em;
+    }
+    #liste-services p{
+        font-size:1.3em;
+        margin-right:2em;
+        margin-left:2em;
+    }
+    #contact{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .contact-card{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contact-card-group{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:1em;
+    }
+}
+
+strong{
+
+    font-weight: 550;
 
 }

@@ -5,39 +5,109 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-    <header>
-        <span class="header-navbar-pc">
-            <ul>
-                <li>Acceuil</li>
-                <li>Peinture</li>
-                <li></li>
-                <li>Nettoyage</li>
-                <li>Traitement</li>
-            </ul>
-        </span>
-        <div class="header-navbar-mobile">
-            <ul>
-                <li><img class="header-mobile-img-logo" src="image-logo.png" alt="Logo"></li>
-                <li><img class="header-mobile-img-menu" src="image-menu.png" alt="Menu" id="menu-btn"></li>
-            </ul>
-            <div class="navbar-mobile-menu" id="navbar-mobile-menu">
-                <a href="main.html">Accueil</a>
-                <a href="toiture.html">Toiture</a>
+        <header>
+            <span class="header-navbar-pc">
+                <img src="image-logo.png" alt="Logo">
 
-                <a href="peinture.html">Peinture</a>
-                <a href="agricole.html">Agricole</a>
+                <ul>
+                    <a href="main.html"><li>Accueil</li></a>
+
+                    <a href="toiture.html"><li>Toiture</li></a>
+                    <a href="peinture.html"><li>Peinture</li></a>
+                    <a href="agricole.html"><li>Agricole</li></a>
+                    <a href="contact.html"><li>Contactez-nous</li></a>
+                </ul>
+            </span>
+            <div class="header-navbar-mobile">
+                <ul>
+                    <li><img class="header-mobile-img-logo" src="image-logo.png" alt="Logo"></li>
+                    <li><img class="header-mobile-img-menu" src="image-menu.png" alt="Menu" id="menu-btn"></li>
+
+                </ul>
+                <div class="navbar-mobile-menu" id="navbar-mobile-menu">
+                    <a href="main.html">Accueil</a>
+
+                    <a href="toiture.html">Toiture</a>
+                    <a href="peinture.html">Peinture</a>
+                    <a href="agricole.html">Agricole</a>
+                    <a href="contact.html">Contactez-nous</a>
+
+                </div>
             </div>
-            </div>
-    </header>    
+        </header>   
         <div id="hero-toiture">
             <div id="hero-toiture-card">
-                <h2>Travaux de toitures et étanchéité</h2>
+                <h2>Nettoyage</h2>
                 <hr>
-                <p>Notre entreprise est spécialisée dans les travaux de toiture et la rénovation de toits pour particuliers et professionnels . Nous intervenons pour la réparation de faîtage, l'étanchéité de cheminée, le remplacement de tuiles cassées ainsi que le traitement de charpente afin d'assurer la solidité et la sécurité de votre habitation.</p>
-                <p>Pour prolonger la durée de vie de votre toiture, nous réalisons l'application de traitements hydrofuges et de résines haute performance sur tuiles et bacs acier. Ces solutions protègent efficacement votre toit contre l'humidité, les infiltrations d'eau, les mousses et les intempéries. Grâce à notre savoir-faire, nous vous garantissons une toiture étanche, résistante et durable dans le temps.</p>
+                <p>Élimination des <em>mousses, lichens et champignons rouges</em> sur vos terrasses et abords de piscine. Nettoyage par pulvérisation pour éliminer toutes saletés.</p>
+                <p>Pour prolonger la durée de vie de votre toiture, nous réalisons l'application de <strong>traitements hydrofuges</strong> et de <strong>résines haute performance</strong> sur tuiles et bacs acier. Ces solutions protègent efficacement votre toit contre l'humidité, les infiltrations d'eau, les mousses et les intempéries. Grâce à notre savoir-faire, nous vous garantissons une toiture <strong>étanche, résistante et durable</strong> dans le temps.</p>
+            </div>
+            <div id="hero-toiture-card-two">
+                
+                <h2> Nos réalisations </h2>
+                <hr>
+                <div class="grille-exemple">
+                    <img src="image-photo1.webp" alt="un">
+                    <img src="image-photo2.webp" alt="deux">
+                    <img src="image-photo3.webp" alt="trois">
+                    <img src="image-photo4.webp" alt="quatre">
+                </div>
             </div>
         </div>
+         <div id="contact">
+            <div class="form-card">
+                <h2>Ne pas hésiter à nous contacter !</h2>
+                <form action="sendmail.php" method="POST">
+                    <div class="form-card-nomprenom">
+                        <div>
+                            <label for="name">Nom</label>
+                            <input type="text" name="name" id="name" required/>
+                        </div>
+                        <div>
+                            <label for="prenom">Prénom</label>
+                            <input type="text" name="prenom" id="prenom" required/>
+                        </div>
+                    </div>
+                
+                    <label for="phone">Numéro de telephone</label>
+                    <input type="text" name="phone" id="phone" placeholder="Ex: 07 54 32 10 01"/>
+                    <label for="mail">E-mail</label>
+                    <input type="mail" name="mail" id="mail" />
 
+
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message"></textarea>
+
+                    <button type="submit">ENVOYER</button>
+                    
+                                                            
+                </form>
+            </div>
+            
+            <div class="contact-card">
+                <div>
+                <hr>
+                <p id="title-fin">PJ Rénovation</p>
+                </div>
+                <div class="contact-card-group">
+                    <div class="contact-card-one">
+                        <h3>Contacts</h3>
+                        <hr>
+                        <p><strong>Siège :</strong> [Adresse]</p>
+                        <p><strong>Mail :</strong> [Mail]</p>
+                    </div>
+                    <div class="social-card">
+                        <h3>Réseaux</h3>
+                        <hr>
+                        <p><strong>Facebook :</strong> <a href="https://www.facebook.com/profile.php?id=61573553947824#">PJ Rénovation</a></p>
+                        <p><strong>Tél : 06 41 51 25 96</strong></p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     <script src="main.js"></script>
 
 </body>
